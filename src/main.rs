@@ -8,10 +8,15 @@ fn intro_text() {
     println!("2 - Wim Hof breathing");
 }
 
-fn main() {
-    intro_text();
+fn read_user_choice() -> String {
     println!("Choose your option!: ");
     let mut user_option = String::new();
     io::stdin().read_line(&mut user_option).expect("Failed to read input!");
+    return user_option;
+}
+
+fn main() {
+    intro_text();
+    let user_option = read_user_choice();
     println!("Your choice was: {}", user_option);
 }
