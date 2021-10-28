@@ -12,11 +12,17 @@ fn read_user_choice() -> String {
     println!("Choose your option!: ");
     let mut user_option = String::new();
     io::stdin().read_line(&mut user_option).expect("Failed to read input!");
-    return user_option;
+    return user_option.trim().to_lowercase();
 }
 
 fn main() {
     intro_text();
     let user_option = read_user_choice();
-    println!("Your choice was: {}", user_option);
+    if !user_option.eq("1") && !user_option.eq("2") {
+        println!("You inserted an invalid choice! Exiting");
+    }
+    else {
+        println!("Your choice was: {}", user_option);
+    }
+    
 }
