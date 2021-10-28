@@ -17,12 +17,17 @@ fn read_user_choice() -> String {
 
 fn main() {
     intro_text();
-    let user_option = read_user_choice();
-    if !user_option.eq("1") && !user_option.eq("2") {
-        println!("You inserted an invalid choice! Exiting");
+    let mut valid_choice = false;
+    while valid_choice != true{
+        let user_option = read_user_choice();
+        if !user_option.eq("1") && !user_option.eq("2") {
+            println!("You inserted an invalid choice! Exiting");
+        }
+        else {
+            println!("Your choice was: {}", user_option);
+            valid_choice = true;
+        }
     }
-    else {
-        println!("Your choice was: {}", user_option);
-    }
+    
     
 }
