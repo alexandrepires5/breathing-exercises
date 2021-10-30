@@ -1,7 +1,13 @@
+//! A practice implementation of something so that I can learn Rust language in a more
+//! practical manner. Just checking the best practices on how to use the language itself
+//! and checking this way of documentation. Seems nice. 
+
+
 use std::io;
 use std::time;
 use std::thread::sleep;
 
+/// A display text for the user
 fn intro_text() {
     println!("Welcome to breathing exercises in rust!");
     println!("This program was made to help you guide through the breathing exercises that we have programmed!");
@@ -10,6 +16,7 @@ fn intro_text() {
     println!("2 - Wim Hof breathing");
 }
 
+/// Reads the user input and parses it
 fn read_user_choice() -> String {
     println!("Choose your option!: ");
     let mut user_option = String::new();
@@ -21,6 +28,7 @@ fn read_user_choice() -> String {
 //     WimHofBreathing(String)
 // }
 
+/// Implementation of box breathing technique
 fn box_breathing() {
     println!("Starting box breathing!");
     println!("First, put yourself comfortable!");
@@ -42,6 +50,7 @@ fn box_breathing() {
     println!("All finished! Better now? :)");
 }
 
+/// Main function. Gets user input, evaluates that its correct and an exercise
 fn main() {
     intro_text();
     let mut valid_choice = false;
