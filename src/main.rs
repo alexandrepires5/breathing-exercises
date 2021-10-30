@@ -1,4 +1,6 @@
 use std::io;
+use std::time;
+use std::thread::sleep;
 
 fn intro_text() {
     println!("Welcome to breathing exercises in rust!");
@@ -20,7 +22,11 @@ fn read_user_choice() -> String {
 // }
 
 fn box_breathing() {
-    println!("starting exercise");
+    println!("Starting box breathing!");
+    println!("First, put yourself comfortable!");
+    println!("Make yourself comfortable! We can wait 10 seconds!");
+    sleep(time::Duration::new(10, 0));
+    println!("Exhale all your air now!");
 }
 
 fn main() {
