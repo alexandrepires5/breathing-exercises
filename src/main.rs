@@ -19,6 +19,10 @@ fn read_user_choice() -> String {
 //     WimHofBreathing(String)
 // }
 
+fn box_breathing() {
+    println!("starting exercise");
+}
+
 fn main() {
     intro_text();
     let mut valid_choice = false;
@@ -27,7 +31,7 @@ fn main() {
         if user_option.eq("1"){
             valid_choice = true;
             println!("Your choice was: BoxBreathing");
-            
+            box_breathing();
         }
         else if !user_option.eq("1") && user_option.eq("2"){
             println!("Wim hof breathing is not yet implemented!");
