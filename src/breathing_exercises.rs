@@ -27,3 +27,7 @@ pub fn box_breathing() {
         }
         println!("All finished! Better now? :)");
 }
+
+pub fn wim_hof_breathing() {
+    println!("Still implementing!!");
+}

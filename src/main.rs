@@ -34,8 +34,10 @@ fn main() {
             println!("Your choice was: BoxBreathing");
             breathing_exercises::box_breathing();
         }
-        else if !user_option.eq("1") && user_option.eq("2"){
-            println!("Wim hof breathing is not yet implemented!");
+        else if user_option.eq("2"){
+            valid_choice = true;
+            println!("Your choice was: Wim Hof breathing");
+            breathing_exercises::wim_hof_breathing();
         }
         else {
             println!("You inserted an invalid choice! Exiting");
